@@ -4,6 +4,7 @@ RwxChecker is a simple tool that detects when a process requests a page with rea
 
 ### Requirements ###
 
+* x86_64 Linux
 * [libunwind](http://www.nongnu.org/libunwind/download.html), tested with 1.1
 
 ### Compilation ###
