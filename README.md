@@ -15,7 +15,6 @@ RwxChecker must be compiled as a shared library:
 gcc -fPIC -shared -Wall -Wextra rwx_checker.c -o librwx_checker.so -ldl -lunwind
 ```
 
-
 ### Usage ###
 
 Preload both *libunwind.so* and *librwx_checker.so* into your executable (backtraces will be printed to stderr):
@@ -23,3 +22,9 @@ Preload both *libunwind.so* and *librwx_checker.so* into your executable (backtr
 ```
 LD_PRELOAD="libunwind.so /path/to/librwx_checker.so" target_executable
 ```
+
+### Further development ###
+
+* Make protection flags selectable (i.e. allow to use only *PROT_WRITE* and *PROT_EXEC*)
+* Support raising SIGTRAP along with printing backtraces
+* Get rid of *libunwind*
